@@ -52,3 +52,12 @@
             loop_var: outer_item
           with_fileglob: "{{ post_provision_tasks|default(omit) }}"
       tags: ['post']
+
+    - import_tasks: tasks/cleanup.yml
+      tags: ['cleanup']
+
+    - import_tasks: tasks/upgrade.yml
+      tags: ['upgrade']
+
+    - import_tasks: tasks/replace-icons.yml
+      tags: ['replace-icon', 'kitty']

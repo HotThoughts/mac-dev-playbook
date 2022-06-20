@@ -1,0 +1,9 @@
+---
+- name: Replace Kitty Icon
+  shell: |
+    # Replace icon
+    cp ../files/terminal/kitty-dark.icns /Applications/kitty.app/Contents/Resources/kitty.icns
+    # Force a reolad
+    touch /Applications/Kitty.app
+    # Force relod Finder and Dock
+    sudo killall Finder && sudo killall Dock
