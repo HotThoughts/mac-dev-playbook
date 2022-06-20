@@ -1,0 +1,8 @@
+---
+- name: Homebrew upgrade
+  shell: brew upgrade
+
+- name: Fisher upgrade
+  args:
+    executable: /usr/local/bin/fish
+  ansible.builtin.shell: fisher update
